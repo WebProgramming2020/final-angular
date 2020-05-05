@@ -1,0 +1,42 @@
+<div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <form [formGroup]="newForm"(ngSubmit)="SetValues()" >
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="form-group">
+            <label for="amount">Amount:</label>
+            <input class="form-control" type="number" formControlName="amount" placeholder="Amount" />
+          </div>
+        </div>
+        </div>
+      <div class="row">
+        <div class="col-sm-5">
+          <div class="form-group">
+            <label for="from">Select From:</label>
+            <select class="form-control" id="from" formControlName="from" placeholder="Select from">
+              <option value="{{ FromSymbol }}">{{ FromSymbol }}</option>
+            </select>
+          </div>
+        </div>
+          <div class="col-sm-5">
+            <div class="form-group">
+              <label for="to">Select To:</label>
+              <select class="form-control" id="to" formControlName="to" placeholder="Select to">
+                <option value="{{ ToSymbol }}" *ngFor="let ToSymbol of ToSymbols">{{ ToSymbol }}</option>
+              </select>
+            </div>
+        </div>
+        </div>
+        
+        <div class="col-sm-12 text-center">
+          <button type="submit" class="btn btn-primary">
+            Convert
+          </button>
+        </div>
+    </form>
+    <h1> {{ResultString}} {{ ToSign }} {{ MultipliedRate }}</h1>
+    <h2>{{RateString}}{{ ToSign }} {{ chosenRate}}</h2>
+  </div>
+</div>
+</div>

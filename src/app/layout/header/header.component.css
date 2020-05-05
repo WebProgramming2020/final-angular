@@ -1,0 +1,17 @@
+.header {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+  }
+  
+  .header a {
+    color: #fff;
+    text-decoration: none;
+  }
+#convert {
+  width: 8rem;
+  height: 5rem;
+  float: left;
+}

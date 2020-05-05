@@ -1,0 +1,32 @@
+<button class = "btn btn-dark" (click)= "show = !show">Add a Converation Rate To The Records</button>
+
+<div *ngIf = "show">
+    <form [formGroup]="newForm" >      
+          <div class="col-sm-3">
+            <div class="form-group">
+              <label for="to">Select To:</label>
+              <select class="form-control" id="to" formControlName="to" placeholder="Select to" #Currency>
+                <option value="{{ ToSymbol }}" *ngFor="let ToSymbol of ToSymbols">{{ ToSymbol }}</option>
+              </select>
+            </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="form-group">
+            <label for="to">Select Date:</label>
+            <select class="form-control" id="to" formControlName="date" placeholder="Select date" #Date>
+              <option value="{{ TodaysDate }}">{{ TodaysDate }}</option>
+            </select>
+          </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+         <label> Rate: </label>
+        <input class="form-control" type = "text" name = "Rate" placeholder="Enter Rate" #Rate>
+        <button class="btn btn-info" type = "submit" (click) = "addTheConversion(Currency.value, Rate.value, Date.value)">Save This Conversion Rate</button>
+        </div>
+      </div>
+      </form>
+</div>
+<div class = "container">
+    <app-data *ngFor = "let conversionData of conversionData" [conversionData] = "conversionData"></app-data>
+</div>
