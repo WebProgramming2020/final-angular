@@ -1,5 +1,19 @@
 # AngularFinalProject
 
+This is my Year 2 - Semester 2 - Web Programming - Final Project 
+
+This web app uses the API fixer.io to return conversion rates from the EURO currency to five other currencies. 
+
+The app was limited by the restrictions imposed by the API. 
+
+To convert FROM currencies other than EURO a subbscription must be paid for the API.
+
+The web app allows you to enter an input amount, choose a currency you would like to convert from and choose a currency you would like to convert to, and displays the calculated result to the user.
+
+These rate results can then be added to a NoSQL database (FireStore) and the project was hosted on Firebase.
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
 ## Development server
